@@ -11,6 +11,13 @@
 #define PASSWORD ""
 
 Ultrasonic ultrasonic(16, 17);
+void leoex_work1_setup()
+{
+    measureAndNotifyDistance();
+    delay(100);
+    Blynk.run();
+}
+/////////////////////////////
 void leoex_work8_setup()
 {
     pinMode(led, OUTPUT);
@@ -57,6 +64,13 @@ void measureAndNotifyDistance()
         //
     }
 }
+void leoex_work1_loop()
+{
+    measureAndNotifyDistance();
+    delay(100);
+    Blynk.run();
+}
+///////////////////////////////
 void leoex_work8_loop()
 {
     measureAndNotifyDistance();
