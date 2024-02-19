@@ -43,7 +43,7 @@ void leoex_work8_setup()
 }
 void measureAndNotifyDistance()
 {
-    Serial.println("Hello from Bocchi");
+    //Serial.println("Uto kawaii");
     int distance = ultrasonic.read();
     if (distance <= 5)
     {
