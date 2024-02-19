@@ -1,6 +1,3 @@
-#define BLYNK_TEMPLATE_ID "TMPL6N_-7GvRl"
-#define BLYNK_TEMPLATE_NAME "Quickstart Template"
-#define BLYNK_AUTH_TOKEN "aGtgFfLCvRY8b_q-iK703e6v3B4nYVv-"
 #include <Arduino.h>
 #include <Ultrasonic.h>
 #include <TridentTD_LineNotify.h>
@@ -12,8 +9,6 @@
 #define led 18
 #define SSID "Wokwi-GUEST"
 #define PASSWORD ""
-#define LINE_TOKEN "ZQpn1iMnORrrnZS5EdSKTboA8S5MFnafFrj904EzCqR"
-
 
 Ultrasonic ultrasonic(16, 17);
 void leoex_work8_setup()
