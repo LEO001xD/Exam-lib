@@ -22,7 +22,7 @@
 >> - ultrasonic use tric(16) & echo(17)
 >
 >```cpp
-> int potentio_work5 = ...;
+> const int potentio_work5 = ...;
 > LiquidCrystal lcd(Rs, E, D4, D5, D6, D7);
 >```
 
