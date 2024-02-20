@@ -32,7 +32,6 @@ void dx100_work2_loop() {
   }
 }
 void dx100_work3_setup() {
-  HCSR04 hc(16, 17); //initialisation class HCSR04 (trig pin , echo pin)void setup() {
   pinMode(led1_work3, OUTPUT);
   pinMode(led2_work3, OUTPUT);
   pinMode(led3_work3, OUTPUT);
