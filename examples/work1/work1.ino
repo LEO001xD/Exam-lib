@@ -1,11 +1,10 @@
 #include <leo_exam.h>
-const uint8_t ldr = 2;
-const uint8_t leds[] = {2, 0, 4};
+const uint8_t led_work1[] = {21, 19, 18, 5, 17};
 void setup()
 {
-    work2::dx100_setup(ldr, leds, 3);
+    work2::dx100_setup(leds, 5);
 }
 void loop()
 {
-    work2::dx100_loop(ldr, leds, 3);
+    work2::dx100_loop(leds, 5);
 }
