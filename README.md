@@ -7,7 +7,7 @@
 > int led_work2[3] = {..., ..., ...};
 >```
 > ## for work3
-> - ultrasonic use tric(16) & echo(17)
+>> - ultrasonic use tric(16) & echo(17)
 >```cpp
 > int servoPin = ...;
 > ```
