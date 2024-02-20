@@ -3,7 +3,7 @@
 #include <ESP32Servo.h>//work4
 #include <LiquidCrystal.h>//work5
 
-HCSR04 hc(16, 17)
+HCSR04 hc(16, 17);
 
 Servo servo;//work4
 
