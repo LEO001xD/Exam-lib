@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <HCSR04.h>
 #include <ESP32Servo.h>//work4
+#include <LiquidCrystal.h>//work5
 
 HCSR04 hc(16, 17)
 
@@ -74,4 +75,27 @@ void 001xd_work4_loop() {
     delay(100);
   }
 }
+int potenVal;
 
+void 001xd_work5_setup() {
+  lcd.begin(16, 2);
+  Serial.begin(115200);
+}
+void 001xd_work5_loop() {
+  int distance = hc.dist();
+  lcd.setCursor(0, 0);
+  lcd.print("distance : "); 
+  lcd.print(distance);
+  lcd.print("        "); 
+  delay(1);
+  potenVal =  analogRead(poten);
+  lcd.setCursor(0, 1);
+  lcd.print("Potentio : ");
+  lcd.print(potenVal);
+  lcd.print("      "); 
+  delay(1);
+  Serial.print("distance:");
+  Serial.println(distance);
+  Serial.print("potentio:");
+  Serial.println(potenVal);
+}
