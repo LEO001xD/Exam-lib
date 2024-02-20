@@ -7,7 +7,7 @@ HCSR04 hc(16, 17);
 
 Servo servo;//work4
 
-void dx100_work2_setup() {
+void dx100_work2_setup(ldr_work2) {
   pinMode(ldr_work2,INPUT);
   for (int i = 0; i < 3; i++) {
     pinMode(led_work2[i], OUTPUT);
