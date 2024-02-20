@@ -1,8 +1,9 @@
 # hi
 ----
 > ## for work2
->
->define ldr_work2 ...
->int led_work2[3] = {..., ..., ...};
-> - "..." = your led pin
+>```cpp
+> define ldr_work2 ...
+> int led_work2[3] = {..., ..., ...};
+>> "..." = your led,ldr pin
+>```
 
