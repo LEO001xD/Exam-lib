@@ -1,6 +1,6 @@
 # hi
 ----
-![esp32](https://raw.githubusercontent.com/BooksHorse/001xD_exam_work/main/extras/esp32-pin.jpg)
+![esp32](extras/esp32-pin.jpg)
 ```cpp
 //### ***"..." = your pin***
 //> ## for work2
@@ -29,5 +29,5 @@
 //>```
 ```
 ---
-![arya_san](https://raw.githubusercontent.com/BooksHorse/001xD_exam_work/main/extras/arya.jpg)
+![arya_san](extras/arya.jpg)
 
