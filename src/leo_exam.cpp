@@ -1,7 +1,11 @@
 #include <Arduino.h>
 #include <HCSR04.h>
-//#define ldr_work2 34
-//int led_work2[3] = {19, 18, 17};
+#include <ESP32Servo.h>//work4
+
+HCSR04 hc(16, 17)
+
+Servo servo;//work4
+
 void 001xd_work2_setup() {
   pinMode(ldr_work2,INPUT);
   for (int i = 0; i < 3; i++) {
@@ -49,6 +53,25 @@ void 001xd_work3_loop() {
     digitalWrite(led3_work3, HIGH);
     digitalWrite(led1_work3, LOW);
     digitalWrite(led2_work3, LOW);
+  }
+}
+void 001xd_work4_setup() { 
+  servo.attach(servo_work4, 500, 2400);
+  Serial.begin(115200);
+}
+void 001xd_work4_loop() {
+  int distance = hc.dist();
+  Serial.println(distance); 
+  delay(100);
+  if (distance >= 0 && distance <= 5) {
+    servo.write(45);
+    delay(100);
+  } else if (distance > 5 && distance < 11) {
+    servo.write(90);
+    delay(100);
+  } else if (distance >= 11 && distance <= 20) {
+    servo.write(180);
+    delay(100);
   }
 }
 
