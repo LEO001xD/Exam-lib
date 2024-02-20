@@ -85,7 +85,7 @@ void dx100_setup(const uint8_t servo_work4) {
   servo.attach(servo_work4, 500, 2400);
   Serial.begin(115200);
 }
-void dx100_loop() {
+void dx100_loop(const uint8_t servo_work4) {
   int distance = hc.dist();
   Serial.println(distance); 
   delay(100);
