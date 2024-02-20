@@ -88,7 +88,7 @@ void 001xd_work5_loop() {
   lcd.print(distance);
   lcd.print("        "); 
   delay(1);
-  potenVal =  analogRead(poten);
+  potenVal =  analogRead(potentio_work5);
   lcd.setCursor(0, 1);
   lcd.print("Potentio : ");
   lcd.print(potenVal);
