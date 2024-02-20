@@ -26,4 +26,6 @@
 > const int potentio_work5 = ...;
 > LiquidCrystal lcd(Rs, E, D4, D5, D6, D7);
 >```
+---
+![arya_san](https://cdn.discordapp.com/attachments/819070568946991129/1209407415548772392/FB_IMG_1707177305376.jpg?ex=65e6cf6d&is=65d45a6d&hm=954bac07eab13970fdd4dd2f56e6adf964325fe1a558a2e6992c44fc21d49689&)
 
