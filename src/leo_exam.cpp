@@ -36,7 +36,7 @@ void 001xd_work3_setup() {
 void 001xd_work3_loop() {
   int distance = hc.dist();
   Serial.println(distance); //return current distance (cm) in serial
-  delay(60);
+  delay(100);
   if (distance >= 0 && distance <= 5) {
     digitalWrite(led1_work3, HIGH);
     digitalWrite(led2_work3, LOW);
