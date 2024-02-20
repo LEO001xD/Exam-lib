@@ -3,7 +3,6 @@
 #include <ESP32Servo.h>//work4
 #include <LiquidCrystal.h>//work5
 
-Servo servo;//work4
 namespace work2{
 void dx100_setup(const uint8_t ldr_work2, const uint8_t led_work2[], const uint8_t arrayLength) {
   pinMode(ldr_work2,INPUT);
