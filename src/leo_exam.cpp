@@ -3,6 +3,28 @@
 #include <ESP32Servo.h>//work4
 #include <LiquidCrystal.h>//work5
 
+namespace work1{
+void dx100_setup(const uint8_t led_work1[], const uint8_t arrayLength) {
+  for (int i = 0; i < arrayLength; i++) {
+    pinMode(led_work1[i], OUTPUT);
+  }
+  Serial.begin(115200);
+  Serial.println("Hello, ESP32!");
+}
+
+void dx100_loop(const uint8_t led_work1[], const uint8_t arrayLength) {
+  for (int i = 0; i < arrayLength; i++) {
+    digitalWrite(led_work1[i], HIGH);
+    delay(100);
+  }
+  for (int i = arrayLength; i >= 0; i--) {
+    digitalWrite(led_work1[i], LOW); // Subtract 1 because array indices start from 0
+    delay(100);
+  }
+  delay(10); // this speeds up the simulation
+}
+}//namespace work1
+
 namespace work2{
 void dx100_setup(const uint8_t ldr_work2, const uint8_t led_work2[], const uint8_t arrayLength) {
   pinMode(ldr_work2,INPUT);
@@ -23,7 +45,7 @@ void dx100_loop(const uint8_t ldr_work2, const uint8_t led_work2[], const uint8_
     }
   }
   else {
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < arrayLength; i++) {
       digitalWrite(led_work2[i], 0);
     }
   }
