@@ -1,8 +1,8 @@
 #include <leo_exam.h>
 
 void setup(){
-    001xd_work1_setup();
+    dx100_work1_setup();
 }
 void loop(){
-    001xd_work2_loop();
+    dx100_work2_loop();
 }
