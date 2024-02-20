@@ -1,6 +1,11 @@
 #include "LiquidCrystal.h"
 #include <cstdint>
 
+namespace work1
+{
+void dx100_setup(const uint8_t led_work1[], const uint8_t arrayLength) ;
+void dx100_loop(const uint8_t led_work1[], const uint8_t arrayLength);
+} // namespace work1
 namespace work2
 {
 void dx100_setup(const uint8_t ldr_work2, const uint8_t led_work2[], const uint8_t arrayLength);
