@@ -7,7 +7,7 @@ HCSR04 hc(16, 17)
 
 Servo servo;//work4
 
-void 001xd_work2_setup() {
+void xd_work2_setup() {
   pinMode(ldr_work2,INPUT);
   for (int i = 0; i < 3; i++) {
     pinMode(led_work2[i], OUTPUT);
@@ -15,7 +15,7 @@ void 001xd_work2_setup() {
   Serial.begin(115200);
 }
 
-void 001xd_work2_loop() {
+void xd_work2_loop() {
   int sun = analogRead(ldr_work2);
   Serial.print("sun >>");
   Serial.println(sun);
@@ -31,14 +31,14 @@ void 001xd_work2_loop() {
     }
   }
 }
-void 001xd_work3_setup() {
+void xd_work3_setup() {
   HCSR04 hc(16, 17); //initialisation class HCSR04 (trig pin , echo pin)void setup() {
   pinMode(led1_work3, OUTPUT);
   pinMode(led2_work3, OUTPUT);
   pinMode(led3_work3, OUTPUT);
   Serial.begin(115200);
 }
-void 001xd_work3_loop() {
+void xd_work3_loop() {
   int distance = hc.dist();
   Serial.println(distance); //return current distance (cm) in serial
   delay(100);
@@ -56,11 +56,11 @@ void 001xd_work3_loop() {
     digitalWrite(led2_work3, LOW);
   }
 }
-void 001xd_work4_setup() { 
+void xd_work4_setup() { 
   servo.attach(servo_work4, 500, 2400);
   Serial.begin(115200);
 }
-void 001xd_work4_loop() {
+void xd_work4_loop() {
   int distance = hc.dist();
   Serial.println(distance); 
   delay(100);
@@ -77,11 +77,11 @@ void 001xd_work4_loop() {
 }
 int potenVal;
 
-void 001xd_work5_setup() {
+void xd_work5_setup() {
   lcd.begin(16, 2);
   Serial.begin(115200);
 }
-void 001xd_work5_loop() {
+void xd_work5_loop() {
   int distance = hc.dist();
   lcd.setCursor(0, 0);
   lcd.print("distance : "); 
