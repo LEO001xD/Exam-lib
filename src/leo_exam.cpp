@@ -5,7 +5,7 @@
 
 Servo servo;//work4
 namespace work2{
-void dx100_setup(const int ldr_work2, const int led_work2[], const int arrayLength) {
+void dx100_setup(const uint8_t ldr_work2, const uint8_t led_work2[], const uint8_t arrayLength) {
   pinMode(ldr_work2,INPUT);
   for (int i = 0; i < arrayLength; i++) {
     pinMode(led_work2[i], OUTPUT);
@@ -13,7 +13,7 @@ void dx100_setup(const int ldr_work2, const int led_work2[], const int arrayLeng
   Serial.begin(115200);
 }
 
-void dx100_loop(const int ldr_work2, const int led_work2[], const int arrayLength) {
+void dx100_loop(const uint8_t ldr_work2, const uint8_t led_work2[], const uint8_t arrayLength) {
   int sun = analogRead(ldr_work2);
   Serial.print("sun >>");
   Serial.println(sun);
@@ -32,13 +32,13 @@ void dx100_loop(const int ldr_work2, const int led_work2[], const int arrayLengt
 }//namespace work2
 namespace work3{
 HCSR04 hc(16, 17);
-void dx100_setup(const int led1_work3, const int led2_work3, const int led3_work3) {
+void dx100_setup(const uint8_t led1_work3, const uint8_t led2_work3, const uint8_t led3_work3) {
   pinMode(led1_work3, OUTPUT);
   pinMode(led2_work3, OUTPUT);
   pinMode(led3_work3, OUTPUT);
   Serial.begin(115200);
 }
-void dx100_loop(const int led1_work3, const int led2_work3, const int led3_work3) {
+void dx100_loop(const uint8_t led1_work3, const uint8_t led2_work3, const uint8_t led3_work3) {
   int distance = hc.dist();
   Serial.println(distance); //return current distance (cm) in serial
   delay(100);
@@ -60,7 +60,7 @@ void dx100_loop(const int led1_work3, const int led2_work3, const int led3_work3
 namespace work4{
 HCSR04 hc(16, 17);
 Servo servo; 
-void dx100_setup(const int servo_work4) { 
+void dx100_setup(const uint8_t servo_work4) { 
   servo.attach(servo_work4, 500, 2400);
   Serial.begin(115200);
 }
@@ -84,12 +84,12 @@ namespace work5{
 int potenVal;
 HCSR04 hc(16, 17);
 
-void dx100_setup(const int potentio_work5, LiquidCrystal lcd) {
+void dx100_setup(const uint8_t potentio_work5, LiquidCrystal lcd) {
   pinMode(potentio_work5, INPUT);
   lcd.begin(16, 2);
   Serial.begin(115200);
 }
-void dx100_loop(const int potentio_work5, LiquidCrystal lcd) {
+void dx100_loop(const uint8_t potentio_work5, LiquidCrystal lcd) {
   int distance = hc.dist();
   lcd.setCursor(0, 0);
   lcd.print("distance : "); 
