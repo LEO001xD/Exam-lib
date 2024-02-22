@@ -98,7 +98,7 @@ void dx100_loop(const uint8_t ldr_work2, const uint8_t led_work2[], const uint8_
 } // namespace work2
 namespace work3
 {
-HCSR04 hc(16, 17);
+HCSR04 hc(18, 19);
 void dx100_setup(const uint8_t led1_work3, const uint8_t led2_work3, const uint8_t led3_work3)
 {
     pinMode(led1_work3, OUTPUT);
@@ -133,7 +133,7 @@ void dx100_loop(const uint8_t led1_work3, const uint8_t led2_work3, const uint8_
 } // namespace work3
 namespace work4
 {
-HCSR04 hc(16, 17);
+HCSR04 hc(18, 19);
 Servo servo; // work4
 void dx100_setup(const uint8_t servo_work4)
 {
@@ -165,7 +165,7 @@ void dx100_loop(const uint8_t servo_work4)
 int potenVal;
 namespace work5
 {
-HCSR04 hc(16, 17);
+HCSR04 hc(18, 19);
 
 void dx100_setup(const uint8_t potentio_work5, LiquidCrystal lcd)
 {
